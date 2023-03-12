@@ -1,13 +1,89 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "SecondaSoft";
+	src: url("./assets/fonts/SecondaSoft-Regular.otf"),
+		url("./assets/fonts/SecondaSoft-Black.otf") format("opentype"),
+		url("./assets/fonts/SecondaSoft-BlackIt.otf") format("opentype"),
+		url("./assets/fonts/SecondaSoft-Bold.otf") format("opentype"),
+		url("./assets/fonts/SecondaSoft-Light.otf") format("opentype"),
+		url("./assets/fonts/SecondaSoft-Medium.otf") format("opentype"),
+		url("./assets/fonts/SecondaSoft-Regular.otf") format("opentype"),
+		url("./assets/fonts/SecondaSoft-Thin.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+	font-family: "SecondaSoft";
+}
+.sidebar {
+	-webkit-animation: slide-left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	animation: slide-left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-left {
+	0% {
+		-webkit-transform: translateX(-100px);
+		transform: translateX(-100px);
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+	}
+}
+
+@keyframes slide-left {
+	0% {
+		-webkit-transform: translateX(-100px);
+		transform: translateX(-100px);
+	}
+	100% {
+		-webkit-transform: translateY(0px);
+		transform: translateX(0px);
+	}
+}
+
+.sidebarr {
+	-webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+	0% {
+		-webkit-transform: translateY(100px);
+		transform: translateY(100px);
+	}
+	100% {
+		-webkit-transform: translateY(-1);
+		transform: translateY(-1);
+	}
+}
+
+@keyframes slide-top {
+	0% {
+		-webkit-transform: translateY(100px);
+		transform: translateY(100px);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+.weather_box {
+	padding: 20px 18px;
+	width: 100%;
+	width: 380px;
+	height: 500px;
+	border-radius: 50px;
+}
+.second_box {
+	padding: 22px 18px;
+	width: 100%;
+	width: 380px;
+	height: 180px;
+	border-radius: 50px;
 }
