@@ -40,19 +40,18 @@ const Home = () => {
 	// };
 	// fetchWeather();
 	return (
-		<div className='bg-[#000a18] text-blue-100 py-40 px-24  max-[734px]:px-5 max-[934px]:justify-center flex max-[934px]:flex-col  max-[934px]:flex '>
-			<div className=' flex-col  max-[934px]:justify-center flex '>
-				<div className='bg-gradient-to-b from-[#15bff7]  to-[#1068f3] max-[934px]:h-[560px] weather_box shadow-[0_35px_60px_-15px_rgba(0,205,231,0.3)] mb-10 max-[934px]:w-full'>
+		<div className='bg-[#000a18] text-blue-100 py-40 px-24  max-[734px]:px-0 justify-center flex '>
+			<div className=' flex-col  flex  max-w-[2300px]'>
+				<div className='bg-gradient-to-b from-[#15bff7]  to-[#1068f3] max-[934px]:h-[560px] weather_box shadow-[0_35px_60px_-15px_rgba(0,205,231,0.3)] mb-10 w-full'>
 					<Inputs onSearchChange={handleOnSearchChange} />
 
 					{currentWeather && <TemperatureAndDetails data={currentWeather} />}
 				</div>
-				<div className='second_box max-[934px]:w-full bg-gradient-to-b from-[#baeeff]  to-[#e0ecff] '>
-					{currentWeather && <SunriseAndSunset data={currentWeather}/>}
+				<div className='second_box w-full bg-gradient-to-b from-[#baeeff]  to-[#e0ecff] '>
+					{currentWeather && <SunriseAndSunset data={currentWeather} />}
 				</div>
+				{forecast && <Forecast title='Daily' data={forecast} />}
 			</div>
-			{/* <Forecast title='Today' /> */}
-			{forecast && <Forecast title='Daily' data={forecast} />}
 		</div>
 	);
 };

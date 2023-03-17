@@ -71,7 +71,7 @@ const Navbar = () => {
 					</div>
 				</div>
 			</nav>
-			<TopButtons />
+		
 		</div>
 	);
 };

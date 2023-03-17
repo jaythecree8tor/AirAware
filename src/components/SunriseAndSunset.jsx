@@ -1,10 +1,10 @@
 import React from "react";
 import { FiSunrise, FiSunset } from "react-icons/fi";
 import { TbSunHigh, TbSunLow } from "react-icons/tb";
-const SunriseAndSunset = ({ data }) => {
+const SunriseAndSunset = ({data}) => {
 	return (
 		<div className=' text-[#000a18e0]'>
-			<div className=' justify-between flex flex-row w-full items-center'>
+			{/* <div className=' justify-between flex flex-row w-full items-center'>
 				<div className=' flex flex-col justify-center text-center'>
 					<div className=' flex justify-center'>
 						<FiSunrise size={25} />
@@ -18,9 +18,9 @@ const SunriseAndSunset = ({ data }) => {
 					</div>
 					<p className=' font-light text-sm'>{Math.round(data.sys.sunset)} PM</p>
 				</div>
-			</div>
+			</div> */}
 
-			<div className=' justify-between flex flex-row w-full items-center mt-8'>
+			<div className=' justify-between flex flex-row w-full items-center'>
 				<div className=' flex flex-col justify-center text-center'>
 					<div className=' flex justify-center'>
 						<TbSunHigh size={25} />

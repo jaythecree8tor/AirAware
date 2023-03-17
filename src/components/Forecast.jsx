@@ -17,15 +17,15 @@ const Forecast = ({ data, title }) => {
   console.log(forecastDays);
 	return (
 		<div>
-			<div className=' flex  items-center justify-start my-4 mx-12 mt-5'>
+			<div className=' flex-col  items-center justify-center my-4 mt-5'>
 				<p className=' text-white font-medium capitalize'>{title}</p>
 				{/* <hr className=' border-[#ffffff] w-full' /> */}
 			</div>
-			<div className=' flex flex-row max-[934px]:flex-col flex-wrap items-center justify-between text-white mx-6 max-[934px]:flex-nowrap '>
+			<div className=' flex flex-col w-full   items-center justify-center text-white '>
 				{data.list.splice(0, 7).map((item, idx) => (
 					<div
 						key={idx}
-						className=' flex flex-col max-[934px]:flex-row max-[934px]:justify-between justify-center text-center items-center border-[1px] py-4 px-8 max-[934px]:w-full m-2 border-[#162b45] rounded-[40px] h-[200px] '
+						className=' flex flex-row max-[934px]:flex-col max-[934px]:justify-center justify-between text-center items-center border-[1px] py-4 px-8 w-full m-2 border-[#162b45] rounded-[40px] h-[200px] '
 					><p className='text-[#667689] font-light text-sm'>{forecastDays[idx]}</p>
 						<p className=''>23&deg;</p>
 
