@@ -1,7 +1,7 @@
 # React Weather App - 
 
 <p align="center">
-   ![Logo](src/assets/images/logo.png) 
+    <img width="220"  src="src/assets/images/logo.png">
 </p>
 
 ![Screenshot](src/assets/images/localhost_3000_.png)
